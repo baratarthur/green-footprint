@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "330558436452",
+    "project_id": "green-footprint-f1b30",
+    "storage_bucket": "green-footprint-f1b30.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:330558436452:android:cac68797abee784a17db71",
+        "android_client_info": {
+          "package_name": "com.iesb.greenfootprint"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "330558436452-hk9akp9ltn0c47e7r1akbng48fp1h76k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfBmjxbwkJmssGqxZLXwpOwZFJ17d1JhM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "330558436452-hk9akp9ltn0c47e7r1akbng48fp1h76k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
