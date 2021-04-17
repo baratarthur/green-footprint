@@ -21,7 +21,7 @@
 
         <Button
             android:id="@+id/bt_singUp"
-            android:layout_width="205dp"
+            android:layout_width="0dp"
             android:layout_height="48dp"
             android:layout_marginStart="98dp"
             android:layout_marginTop="50dp"
@@ -36,7 +36,7 @@
 
         <Button
             android:id="@+id/bt_voltar"
-            android:layout_width="153dp"
+            android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_marginStart="129dp"
             android:layout_marginTop="30dp"
@@ -44,6 +44,7 @@
             android:layout_marginBottom="44dp"
             android:onClick="@{voltar::retornar}"
             android:text="@string/voltar"
+            android:textAlignment="center"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
@@ -60,6 +61,7 @@
             android:ems="10"
             android:hint="@string/emailCadastro"
             android:inputType="textEmailAddress"
+            android:textAlignment="center"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.507"
@@ -77,6 +79,7 @@
             android:ems="10"
             android:hint="@string/senhaCadastro"
             android:inputType="textPassword"
+            android:textAlignment="center"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.514"
@@ -94,6 +97,7 @@
             android:ems="10"
             android:hint="@string/senhaconfirm"
             android:inputType="textPassword"
+            android:textAlignment="center"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.527"

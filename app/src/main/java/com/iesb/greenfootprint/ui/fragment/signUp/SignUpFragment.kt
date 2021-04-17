@@ -9,7 +9,9 @@ import androidx.navigation.fragment.findNavController
 import com.google.firebase.auth.FirebaseAuth
 import com.iesb.greenfootprint.R
 import com.iesb.greenfootprint.databinding.FragmentSignUpBinding
+import com.iesb.greenfootprint.interector.SignUpInteractor
 import javax.inject.Inject
+import kotlin.math.sign
 
 class SignUpFragment : Fragment() {
 
@@ -27,12 +29,16 @@ class SignUpFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
 
+        val signInteraction = SignUpInteractor()
+
         binding = FragmentSignUpBinding.inflate(inflater , container , false)
         binding.lifecycleOwner = this
-        binding.twEmail
-        binding.twSenha
-        binding.twConfimaSenha
-        binding.btSingUp.setOnClickListener{   }
+        val strEmail = binding.twEmail.text.toString()
+        val strSenha = binding.twSenha.text.toString()
+        val strConfirmSenha =binding.twConfimaSenha.text.toString()
+        binding.btSingUp.setOnClickListener{
+            signInteraction.validaSignUp(strEmail,strSenha,strConfirmSenha)
+        }
         binding.voltar
 
 
