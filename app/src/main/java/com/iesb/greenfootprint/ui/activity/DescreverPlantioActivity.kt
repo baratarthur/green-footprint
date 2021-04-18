@@ -1,18 +1,16 @@
 package com.iesb.greenfootprint.ui.activity
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.iesb.greenfootprint.R
 
-class MainActivity : AppCompatActivity() {
+class DescreverPlantioActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_descrever_plantio)
 
-        val intencaoDechamada = Intent(this, MenuActivity::class.java)
-        startActivity(intencaoDechamada)
 
     }
+
 
 }
