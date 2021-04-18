@@ -3,6 +3,7 @@ package com.iesb.greenfootprint.domain
 import com.google.firebase.auth.FirebaseAuth
 import org.w3c.dom.Text
 
+
 open class AuthUser {
 
     private val auth = FirebaseAuth.getInstance()
