@@ -1,7 +1,6 @@
 package com.iesb.greenfootprint.domain
 
 import com.google.firebase.auth.FirebaseAuth
-import org.w3c.dom.Text
 
 open class AuthUser {
 
@@ -25,14 +24,12 @@ open class AuthUser {
         return true
     }
 
-    fun Auth_login(email: String , senha: String) : Boolean {
+    fun Auth_login(email: String , senha: String) : Boolean{
 
 
         val taskdeLogin = auth.signInWithEmailAndPassword(email , senha)
-        taskdeLogin.addOnCompleteListener{ resultado ->
-            if(resultado.isSuccessful){
+        taskdeLogin.addOnCompleteListener{
 
-            }
         }
         return true
     }
