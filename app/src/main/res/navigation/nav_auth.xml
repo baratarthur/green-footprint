@@ -10,4 +10,9 @@
         android:name="com.iesb.greenfootprint.ui.fragment.signUp.SignUpFragment"
         android:label="SignUpFragment"
         tools:layout="@layout/fragment_sign_up"/>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.iesb.greenfootprint.ui.fragment.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" />
 </navigation>

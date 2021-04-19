@@ -1,51 +1,45 @@
 package com.iesb.greenfootprint.domain
 
+import android.content.Intent
+import android.util.Log
 import com.google.firebase.auth.FirebaseAuth
-import org.w3c.dom.Text
+import com.iesb.greenfootprint.ui.activity.MainActivity
 
+open class AuthUser(var email: String, var password: String) {
 
-open class AuthUser {
+    val auth: FirebaseAuth = FirebaseAuth.getInstance()
 
-    private val auth = FirebaseAuth.getInstance()
-
-    fun Auth_Cadastro(email : String , senha : String ) : Boolean {
-
-
-        val taskDeCadastro = auth.createUserWithEmailAndPassword(email , senha)
-        taskDeCadastro.addOnCompleteListener{
-                resultado ->
-            if (resultado.isSuccessful){
-
-
-            }
-            else{
-                // Toast.makeText(this, "Falha no cadastro" , Toast.LENGTH_LONG).show()
-            }
+    fun createUserAndAuthenticate() {
+        if (email == "" || password == "") {
+            throw Error("email or password are empty")
+        } else {
+            auth.createUserWithEmailAndPassword(email , password)
+                .addOnCompleteListener{ task ->
+                    if (task.isSuccessful) {
+                        Log.d("FIRE", "User created successfully")
+                        this.signIn()
+                    } else {
+                        Log.d("FIRE", "Problems with creation")
+                        throw Error(task.exception?.message.toString())
+                    }
+                }
         }
-
-        return true
     }
 
-    fun Auth_login(email: String , senha: String) : Boolean {
-
-
-        val taskdeLogin = auth.signInWithEmailAndPassword(email , senha)
-        taskdeLogin.addOnCompleteListener{ resultado ->
-            if(resultado.isSuccessful){
-
+    fun signIn() {
+        val loginTask = auth.signInWithEmailAndPassword(email , password)
+        loginTask.addOnCompleteListener{ task ->
+            if(task.isSuccessful){
+                Log.d("FIRE", "User signed in successfully")
             }
         }
-        return true
     }
 
-    fun Auth_forgot(email: String): Boolean{
-
+    fun requestPassword() {
         val taskforgot = auth.sendPasswordResetEmail(email)
         taskforgot.addOnCompleteListener{
 
         }
-
-        return true
     }
 
 

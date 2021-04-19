@@ -11,10 +11,19 @@
     <string name="senhaconfirm">Confirmar Senha</string>
 
     <!-- Voltar / SignUp / Login / Forgot -->
-    <string name="voltar">Voltar</string>
     <string name="signUp">Cadastrar</string>
     <string name="Login">Login</string>
-    <string name="forgot">Forgot</string>
+    <string name="forgot">Click here if you forgot your password</string>
+    <string name="gotoLogin">Click here if you already has an account</string>
+    <string name="title_activity_sign_up">SignUpActivity</string>
+    <string name="forgot_password_hint">Enter your email below to receive an email to change password</string>
+    <string name="receive_password_email_button">Change password</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
+    <string name="title_activity_login">LoginActivity</string>
 
 
 </resources>

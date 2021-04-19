@@ -34,10 +34,9 @@ class SignUpFragment : Fragment() {
         binding = FragmentSignUpBinding.inflate(inflater , container , false)
         binding.lifecycleOwner = this
         val strEmail = binding.twEmail.text.toString()
-        val strSenha = binding.twSenha.text.toString()
-        val strConfirmSenha =binding.twConfimaSenha.text.toString()
+        val strSenha = binding.twPassword.text.toString()
+        val strConfirmSenha =binding.twConfirmPassword.text.toString()
         binding.btSingUp.setOnClickListener{
-            signInteraction.validaSignUp(strEmail,strSenha,strConfirmSenha)
         }
         binding.voltar
 

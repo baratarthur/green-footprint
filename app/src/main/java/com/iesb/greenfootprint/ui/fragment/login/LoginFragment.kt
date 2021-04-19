@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.iesb.greenfootprint.R
-import com.iesb.greenfootprint.domain.AuthUser
 import kotlinx.android.synthetic.main.fragment_login.*
 
 
@@ -17,10 +16,10 @@ class LoginFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-    bt_Login.setOnClickListener{
+    btLogin.setOnClickListener{
         login()
     }
-    tw_forgot.setOnClickListener{
+    tvForgotPassword.setOnClickListener{
 
     }
 
@@ -29,11 +28,8 @@ class LoginFragment : Fragment() {
 
     private fun login() {
 
-        val email = tw_Email.text.toString()
-        val senha = tw_Senha.text.toString()
-        val auth = AuthUser()
-
-        auth.Auth_login(email , senha)
+        val email = twEmailLogin.text.toString()
+        val senha = twPasswordLogin.text.toString()
 
     }
 
