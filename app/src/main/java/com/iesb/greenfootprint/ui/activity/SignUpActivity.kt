@@ -20,11 +20,6 @@ class SignUpActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up)
 
-        tvGotoLogin.setOnClickListener {
-            val login = Intent(this, LoginActivity::class.java)
-            startActivity(login)
-        }
-
         btSingUp.setOnClickListener {
             val email = twEmail.text.toString()
             val password = twPassword.text.toString()

@@ -33,9 +33,12 @@ class LoginActivity : AppCompatActivity() {
             try {
                 signinInteractor.signinWithUser(email, password)
                 Log.d("auth", "user logged with success")
+                val ChamadaMenu = Intent(this, MenuAppActivity::class.java)
+                startActivity(ChamadaMenu)
+
             } catch (err: Error) {
                 Log.d("ERROR", err.message.toString())
-                Toast.makeText(this, "Problemas na criacao de conta", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Email ou Senha errados", Toast.LENGTH_LONG).show()
             }
         }
     }

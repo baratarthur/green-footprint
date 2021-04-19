@@ -1,9 +1,10 @@
-package com.iesb.greenfootprint.ui.activity
+package com.iesb.greenfootprint.ui.activity.splash
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.iesb.greenfootprint.R
+import com.iesb.greenfootprint.ui.activity.MenuLoginSignActivity
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.delay
@@ -15,10 +16,12 @@ class SplashScreenActivity : AppCompatActivity() {
         setContentView(R.layout.activity_splash_screen)
 
         GlobalScope.launch(context = Dispatchers.Main) {
-            delay(4000)
+            delay(2500)
+            chamaMenu()
         }
-
-        val signup = Intent(this, SignUpActivity::class.java)
-        startActivity(signup)
+    }
+    private fun chamaMenu(){
+        val ChamadaMenu = Intent(this, MenuLoginSignActivity::class.java)
+        startActivity(ChamadaMenu)
     }
 }
