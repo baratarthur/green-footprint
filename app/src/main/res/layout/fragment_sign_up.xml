@@ -7,8 +7,8 @@
     <data>
 
         <variable
-            name="voltar"
-            type="com.iesb.greenfootprint.ui.fragment.signUp.SignUpFragment" />
+            name="fragment"
+            type="com.iesb.greenfootprint.ui.fragment.auth.SignUpFragment" />
 
     </data>
 
@@ -21,6 +21,7 @@
 
         <Button
             android:id="@+id/btSingUp"
+            android:onClick="@{fragment::cadastroLogin}"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"

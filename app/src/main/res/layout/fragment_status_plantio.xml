@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="fragment"
+            type="com.iesb.greenfootprint.ui.fragment.inicio.StatusPlantioFragment" />
+    </data>
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.activity.AvaliacaoActivity">
+    tools:context=".ui.fragment.inicio.StatusPlantioFragment">
 
     <ImageView
         android:id="@+id/imageView"
@@ -45,6 +52,7 @@
 
     <Button
         android:id="@+id/tv_enviar"
+        android:onClick="@{fragment::send}"
         android:layout_width="220dp"
         android:layout_height="0dp"
         android:layout_marginTop="50dp"
@@ -151,3 +159,5 @@
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

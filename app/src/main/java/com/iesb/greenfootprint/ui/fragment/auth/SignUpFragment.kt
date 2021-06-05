@@ -1,6 +1,7 @@
-package com.iesb.greenfootprint.ui.fragment.signUp
+package com.iesb.greenfootprint.ui.fragment.auth
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -11,15 +12,17 @@ import com.iesb.greenfootprint.R
 import com.iesb.greenfootprint.databinding.FragmentSignUpBinding
 import com.iesb.greenfootprint.interector.SignUpInteractor
 import javax.inject.Inject
-import kotlin.math.sign
 
 class SignUpFragment : Fragment() {
 
     private lateinit var binding : FragmentSignUpBinding
     @Inject lateinit var auth : FirebaseAuth
 
-    fun retornar(view : View){
-        //findNavController().navigate(R.id. **nome da action para tela introdutoria do app** )
+    @Suppress("UNUSED_PARAMETER")
+    fun cadastroLogin(view : View){
+
+        cadastramento()
+        findNavController().navigate(R.id.action_signUpFragment_to_loginFragment )
     }
 
 
@@ -29,21 +32,26 @@ class SignUpFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
 
-        val signInteraction = SignUpInteractor()
-
         binding = FragmentSignUpBinding.inflate(inflater , container , false)
         binding.lifecycleOwner = this
-        val strEmail = binding.twEmail.text.toString()
-        val strSenha = binding.twPassword.text.toString()
-        val strConfirmSenha =binding.twConfirmPassword.text.toString()
         binding.btSingUp.setOnClickListener{
+
         }
-        binding.voltar
-
-
-
         return binding.root
     }
 
+    private fun cadastramento(){
+        val email = binding.twEmail.text.toString()
+        val senha = binding.twPassword.text.toString()
+        val confirmSenha = binding.twConfirmPassword.text.toString()
+        val signUpInteractor = SignUpInteractor()
+
+        try {
+            signUpInteractor.createUserAndSignIn(email, senha, confirmSenha)
+        } catch (err: Error) {
+            Log.d("ERROR", err.message.toString())
+            //Toast.makeText(this, "Problemas na criacao de conta", Toast.LENGTH_LONG).show()
+        }
+    }
 
 }

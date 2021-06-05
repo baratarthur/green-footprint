@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+        <variable
+            name="fragmentoMenu"
+            type="com.iesb.greenfootprint.ui.fragment.screen.MenuFragment" />
+    </data>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.activity.MenuLoginSignActivity"
+    tools:context=".ui.fragment.screen.MenuFragment"
     android:background="@drawable/fundo_cadastro">
 
 
@@ -23,6 +30,7 @@
 
     <Button
         android:id="@+id/bt_loginMain"
+        android:onClick="@{fragmentoMenu::btLoginMenu}"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
@@ -40,6 +48,7 @@
 
     <Button
         android:id="@+id/bt_cadastroMain"
+        android:onClick="@{fragmentoMenu::btCadastroMenu}"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
@@ -71,3 +80,5 @@
         app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

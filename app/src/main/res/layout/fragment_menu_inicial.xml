@@ -1,9 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="fragment"
+            type="com.iesb.greenfootprint.ui.fragment.inicio.MenuInicialFragment" />
+    </data>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.activity.MenuAppActivity"
+    tools:context=".ui.fragment.inicio.MenuInicialFragment"
     android:background="@drawable/fundo_menu">
 
 
@@ -224,6 +231,7 @@
 
     <Button
         android:id="@+id/bt_cadNovoPlantio"
+        android:onClick="@{fragment::NovoStatus}"
         android:layout_width="169dp"
         android:layout_height="44dp"
         android:layout_marginTop="56dp"
@@ -237,3 +245,5 @@
         app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

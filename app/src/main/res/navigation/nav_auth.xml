@@ -3,16 +3,54 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_auth.xml"
-    app:startDestination="@id/signUpFragment">
+    app:startDestination="@id/menuFragment">
 
     <fragment
         android:id="@+id/signUpFragment"
-        android:name="com.iesb.greenfootprint.ui.fragment.signUp.SignUpFragment"
+        android:name="com.iesb.greenfootprint.ui.fragment.auth.SignUpFragment"
         android:label="SignUpFragment"
-        tools:layout="@layout/fragment_sign_up"/>
+        tools:layout="@layout/fragment_sign_up">
+        <action
+            android:id="@+id/action_signUpFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.iesb.greenfootprint.ui.fragment.login.LoginFragment"
+        android:name="com.iesb.greenfootprint.ui.fragment.auth.LoginFragment"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login" />
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_forgotFragment"
+            app:destination="@id/forgotFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_nav_app"
+            app:destination="@id/nav_app" />
+    </fragment>
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.iesb.greenfootprint.ui.fragment.screen.MenuFragment"
+        android:label="MenuFragment"
+        tools:layout="@layout/fragment_menu">
+        <action
+            android:id="@+id/action_menuFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/forgotFragment"
+        android:name="com.iesb.greenfootprint.ui.fragment.auth.ForgotFragment"
+        android:label="fragment_forgot"
+        tools:layout="@layout/fragment_forgot" >
+        <action
+            android:id="@+id/action_forgotFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <include app:graph="@navigation/nav_app" />
+    <fragment
+        android:id="@+id/splashScreenFragment"
+        android:name="com.iesb.greenfootprint.ui.fragment.splash.SplashScreenFragment"
+        android:label="SplashScreenFragment"
+        tools:layout="@layout/fragment_splash_screen"/>
 </navigation>
