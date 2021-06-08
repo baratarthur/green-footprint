@@ -17,7 +17,7 @@ class MenuInicialFragment : Fragment() {
      @Suppress("UNUSED_PARAMETER")
      fun NovoStatus(v : View){
 
-         findNavController().navigate(R.id.action_menuInicialFragment_to_statusPlantioFragment)
+         findNavController().navigate(R.id.action_menuInicialFragment_to_mapsFragment)
      }
 
     override fun onCreateView(

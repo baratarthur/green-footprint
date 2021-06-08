@@ -13,10 +13,18 @@
         <action
             android:id="@+id/action_menuInicialFragment_to_statusPlantioFragment"
             app:destination="@id/statusPlantioFragment" />
+        <action
+            android:id="@+id/action_menuInicialFragment_to_mapsFragment"
+            app:destination="@id/mapsFragment" />
     </fragment>
     <fragment
         android:id="@+id/statusPlantioFragment"
         android:name="com.iesb.greenfootprint.ui.fragment.inicio.StatusPlantioFragment"
         android:label="StatusPlantioFragment"
         tools:layout="@layout/fragment_status_plantio"/>
+    <fragment
+        android:id="@+id/mapsFragment"
+        android:name="com.iesb.greenfootprint.ui.fragment.maps.MapsFragment"
+        android:label="MapsFragment"
+        tools:layout="@layout/fragment_maps"/>
 </navigation>
