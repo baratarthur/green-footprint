@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_menuInicialFragment_to_mapsFragment"
             app:destination="@id/mapsFragment" />
+        <action
+            android:id="@+id/action_menuInicialFragment_to_chatBotFragment"
+            app:destination="@id/chatBotFragment" />
     </fragment>
     <fragment
         android:id="@+id/statusPlantioFragment"
@@ -27,4 +30,9 @@
         android:name="com.iesb.greenfootprint.ui.fragment.maps.MapsFragment"
         android:label="MapsFragment"
         tools:layout="@layout/fragment_maps"/>
+    <fragment
+        android:id="@+id/chatBotFragment"
+        android:name="com.iesb.greenfootprint.ui.fragment.chat.ChatBotFragment"
+        android:label="fragment_chat_bot"
+        tools:layout="@layout/fragment_chat_bot" />
 </navigation>

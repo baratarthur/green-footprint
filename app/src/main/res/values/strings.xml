@@ -29,6 +29,8 @@
     <string name="hello_world">Hello Square World!</string>
     <string name="title_activity_login">LoginActivity</string>
     <string name="localizacao_maps">Locais onde Plantar</string>
+    <string name="Pontos_plantio">Pontos para Plantio</string>
+    <string name="chatBot">ChatBot</string>
 
 
 </resources>

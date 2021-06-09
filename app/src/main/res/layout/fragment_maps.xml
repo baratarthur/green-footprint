@@ -34,7 +34,7 @@
         android:layout_marginTop="28dp"
         android:layout_marginBottom="638dp"
         android:fontFamily="@font/montserrat_extra_bold"
-        android:text="Pontos para Plantio"
+        android:text="@string/Pontos_plantio"
         android:textAlignment="center"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="@+id/map"
