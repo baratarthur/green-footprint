@@ -19,12 +19,15 @@ class SignUpFragment : Fragment() {
     @Inject lateinit var auth : FirebaseAuth
 
     @Suppress("UNUSED_PARAMETER")
-    fun cadastroLogin(view : View){
-
-        cadastramento()
+    fun gotoLogin(view : View) {
         findNavController().navigate(R.id.action_signUpFragment_to_loginFragment )
     }
 
+    @Suppress("UNUSED_PARAMETER")
+    fun createAccountAndGotoLogin(view : View) {
+        createAccount()
+        findNavController().navigate(R.id.action_signUpFragment_to_loginFragment )
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -34,13 +37,12 @@ class SignUpFragment : Fragment() {
 
         binding = FragmentSignUpBinding.inflate(inflater , container , false)
         binding.lifecycleOwner = this
-        binding.btSingUp.setOnClickListener{
+        binding.signUpFragment = this
 
-        }
         return binding.root
     }
 
-    private fun cadastramento(){
+    private fun createAccount(){
         val email = binding.twEmail.text.toString()
         val senha = binding.twPassword.text.toString()
         val confirmSenha = binding.twConfirmPassword.text.toString()

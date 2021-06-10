@@ -15,14 +15,14 @@ class MenuFragment : Fragment() {
 
     private lateinit var binding : FragmentMenuBinding
 
-    @Suppress("UNUSED_PARAMETER")
-    fun btLoginMenu(v : View){
-        findNavController().navigate(R.id.action_menuFragment_to_loginFragment)
-    }
-    @Suppress("UNUSED_PARAMETER")
-    fun btCadastroMenu(v : View){
-        findNavController().navigate(R.id.action_menuFragment_to_signUpFragment)
-    }
+//    @Suppress("UNUSED_PARAMETER")
+//    fun btLoginMenu(v : View){
+//        findNavController().navigate(R.id.action_menuFragment_to_loginFragment)
+//    }
+//    @Suppress("UNUSED_PARAMETER")
+//    fun btCadastroMenu(v : View){
+//        findNavController().navigate(R.id.action_menuFragment_to_signUpFragment)
+//    }
 
     override fun onCreateView(
         inflater: LayoutInflater,

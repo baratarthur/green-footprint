@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.iesb.greenfootprint.R
+import com.iesb.greenfootprint.ui.activity.AuthActivity
 import com.iesb.greenfootprint.ui.fragment.screen.MenuFragment
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
@@ -22,7 +23,7 @@ class SplashScreenActivity : AppCompatActivity() {
     }
 
     private fun chamaMenu(){
-        val ChamadaMenu = Intent(this, MenuFragment::class.java)
+        val ChamadaMenu = Intent(this, AuthActivity::class.java)
         startActivity(ChamadaMenu)
     }
 }
