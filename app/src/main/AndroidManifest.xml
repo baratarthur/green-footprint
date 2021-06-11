@@ -4,8 +4,6 @@
 
     <uses-permission android:name="android.permission.WAKE_LOCK" />
 
-    <uses-feature android:name="android.hardware.type.watch" />
-
     <application
         android:name=".GreenApp"
         android:allowBackup="true"
@@ -13,31 +11,17 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_green"
         android:supportsRtl="true"
-        android:theme="@style/Theme.NoTitleBar">
+        android:theme="@style/Theme.GreenFootprint">
+
         <activity android:name=".ui.activity.Sug_MapActivity"></activity>
-        <activity android:name=".ui.activity.AvaliacaoActivity" />
-        <activity android:name=".ui.activity.MenuAppActivity" />
         <activity android:name=".ui.activity.splash.SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.activity.MenuLoginSignActivity" />
-        <activity android:name=".ui.activity.ForgotPasswordActivity" />
-        <activity
-            android:name=".ui.activity.SignUpActivity"
-            android:label="@string/title_activity_sign_up">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".ui.activity.LoginActivity" />
-        <activity android:name=".ui.activity.AuthActivity" />
         <activity android:name=".ui.activity.MainActivity" />
+        <activity android:name=".ui.activity.AuthActivity"/>
     </application>
 
 </manifest>

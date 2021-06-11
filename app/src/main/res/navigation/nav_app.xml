@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_app"
+    app:startDestination="@id/menuInicialFragment">
+
+    <fragment
+        android:id="@+id/menuInicialFragment"
+        android:name="com.iesb.greenfootprint.ui.fragment.inicio.MenuInicialFragment"
+        android:label="MenuInicialFragment"
+        tools:layout="@layout/fragment_menu_inicial">
+        <action
+            android:id="@+id/action_menuInicialFragment_to_statusPlantioFragment"
+            app:destination="@id/statusPlantioFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/statusPlantioFragment"
+        android:name="com.iesb.greenfootprint.ui.fragment.inicio.StatusPlantioFragment"
+        android:label="StatusPlantioFragment"
+        tools:layout="@layout/fragment_status_plantio"/>
+</navigation>
