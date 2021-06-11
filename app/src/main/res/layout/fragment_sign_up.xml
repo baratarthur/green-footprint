@@ -5,11 +5,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
         <variable
             name="signUpFragment"
             type="com.iesb.greenfootprint.ui.fragment.auth.SignUpFragment" />
-
     </data>
 
 
