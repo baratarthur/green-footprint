@@ -8,5 +8,27 @@
         <item name="android:textColor">?attr/colorOnPrimary</item>
         <item name="android:textAppearance">?attr/textAppearanceBody1</item>
     </style>
+  
+    <style name="Widget.MaterialComponents.Button.OutlinedButton.PrimaryButton">
+        <item name="cornerRadius">8dp</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:minHeight">68dp</item>
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+        <item name="backgroundTint">?attr/colorPrimary</item>
+        <item name="strokeColor">?attr/colorSecondary</item>
+        <item name="rippleColor">?attr/colorPrimary</item>
+    </style>
+
+    <style name="Widget.OnboardTitle" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/brown</item>
+        <item name="android:textAppearance">@style/OnBoardTitle</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="Widget.OnboardSubTitle" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/brown</item>
+        <item name="android:textAppearance">@style/OnBoardSubTitle</item>
+        <item name="android:textAlignment">center</item>
+    </style>
 
 </resources>

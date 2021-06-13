@@ -1,7 +1,5 @@
 <resources>
     <string name="app_name">Green Footprint</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <!-- Email / Senha -->
     <string name="email">Email</string>
@@ -17,17 +15,23 @@
     <string name="forgot">Click here if you forgot your password</string>
     <string name="gotoLogin">Click here if you already has an account</string>
     <string name="title_activity_sign_up">SignUpActivity</string>
-    <string name="forgot_password_hint">Enter your email below to receive an email to change password</string>
+    <string name="forgot_password_hint">
+        Enter your email below to receive an email to change password
+    </string>
     <string name="receive_password_email_button">Change password</string>
+
+    <string name="onboarding_start">Click here to start</string>
+    <string name="onboarding_first_title">Laern how to plant a tree</string>
+    <string name="onboarding_first_subtitle">
+        Here you found the best species to plant where you live
+    </string>
+    <string name="onboarding_second_title">Help the enviroment</string>
+    <string name="onboarding_seocnd_subtitle">
+        Plant trees helps the enviroment to recover from the human damage
+    </string>
+
 
     <!-- Menu Interno -->
     <string name="novo_cadastro">Novo Status</string>
-    <!--
-    This string is used for square devices and overridden by hello_world in
-    values-round/strings.xml for round devices.
-    -->
-    <string name="hello_world">Hello Square World!</string>
-    <string name="title_activity_login">LoginActivity</string>
-
 
 </resources>
