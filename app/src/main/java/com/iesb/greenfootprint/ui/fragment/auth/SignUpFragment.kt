@@ -6,28 +6,21 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
-import com.google.firebase.auth.FirebaseAuth
 import com.iesb.greenfootprint.R
 import com.iesb.greenfootprint.databinding.FragmentSignUpBinding
-import com.iesb.greenfootprint.interector.SignUpInteractor
-import javax.inject.Inject
+import com.iesb.greenfootprint.domain.RegisterForm
+import com.iesb.greenfootprint.domain.RegisterResult
+import com.iesb.greenfootprint.viewmodel.SignUpViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class SignUpFragment : Fragment() {
 
     private lateinit var binding : FragmentSignUpBinding
-    @Inject lateinit var auth : FirebaseAuth
-
-    @Suppress("UNUSED_PARAMETER")
-    fun gotoLogin(view : View) {
-        findNavController().navigate(R.id.action_signUpFragment_to_loginFragment )
-    }
-
-    @Suppress("UNUSED_PARAMETER")
-    fun createAccountAndGotoLogin(view : View) {
-        createAccount()
-        findNavController().navigate(R.id.action_signUpFragment_to_loginFragment )
-    }
+    private val viewModel: SignUpViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -42,17 +35,38 @@ class SignUpFragment : Fragment() {
         return binding.root
     }
 
-    private fun createAccount(){
-        val email = binding.twEmail.text.toString()
-        val senha = binding.twPassword.text.toString()
-        val confirmSenha = binding.twConfirmPassword.text.toString()
-        val signUpInteractor = SignUpInteractor()
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
+        viewModel.result.observe(viewLifecycleOwner) {
+            when (it) {
+                is RegisterResult.Success -> {
+                    findNavController().navigate(R.id.action_signUpFragment_to_loginFragment)
+                }
+                is RegisterResult.Fail -> {
+                    Toast.makeText(context, it.msg, Toast.LENGTH_LONG).show()
+                }
+            }
+        }
+    }
+
+    @Suppress("UNUSED_PARAMETER")
+    fun gotoLogin(view : View) {
+        findNavController().navigate(R.id.action_signUpFragment_to_loginFragment )
+    }
+
+    @Suppress("UNUSED_PARAMETER")
+    fun createAccount(view : View) {
         try {
-            signUpInteractor.createUserAndSignIn(email, senha, confirmSenha)
-        } catch (err: Error) {
-            Log.d("ERROR", err.message.toString())
-            //Toast.makeText(this, "Problemas na criacao de conta", Toast.LENGTH_LONG).show()
+            val form = RegisterForm(
+                binding.twEmail.text.toString(),
+                binding.twPassword.text.toString(),
+                binding.twConfirmPassword.text.toString()
+            )
+
+            viewModel.registerUser(form)
+        } catch (e: Error) {
+            Log.d("ERROR", e.message.toString())
         }
     }
 

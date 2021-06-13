@@ -19,4 +19,16 @@
         <item name="rippleColor">?attr/colorPrimary</item>
     </style>
 
+    <style name="Widget.OnboardTitle" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/brown</item>
+        <item name="android:textAppearance">@style/OnBoardTitle</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="Widget.OnboardSubTitle" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/brown</item>
+        <item name="android:textAppearance">@style/OnBoardSubTitle</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
 </resources>
