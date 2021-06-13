@@ -1,15 +1,11 @@
 package com.iesb.greenfootprint.ui.fragment.splash
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.fragment.findNavController
-import com.iesb.greenfootprint.R
 import com.iesb.greenfootprint.databinding.FragmentSplashScreenBinding
-import com.iesb.greenfootprint.ui.fragment.screen.MenuFragment
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.delay

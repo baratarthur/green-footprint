@@ -7,12 +7,12 @@
     android:layout_height="match_parent"
     android:background="@drawable/fundo_cadastro"
     app:layoutDescription="@xml/splashscreen_scene"
-    tools:context=".ui.activity.lixo.MenuLoginSignActivity">
+    tools:context=".ui.activity.splash.SplashScreenActivity">
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"

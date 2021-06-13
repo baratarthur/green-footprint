@@ -4,14 +4,14 @@
     <data>
         <variable
             name="fragmentoMenu"
-            type="com.iesb.greenfootprint.ui.fragment.screen.MenuFragment" />
+            type="com.iesb.greenfootprint.ui.fragment.inicio.MenuFragment" />
     </data>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragment.screen.MenuFragment"
+    tools:context=".ui.fragment.inicio.MenuFragment"
     android:background="@drawable/fundo_cadastro">
 
 
@@ -30,10 +30,10 @@
 
     <Button
         android:id="@+id/bt_loginMain"
-        android:onClick="@{fragmentoMenu::btLoginMenu}"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
+        android:onClick="@{fragmentoMenu::btLoginMenu}"
         android:layout_marginTop="190dp"
         android:layout_marginEnd="50dp"
         android:background="@drawable/custom_button1"
@@ -48,11 +48,11 @@
 
     <Button
         android:id="@+id/bt_cadastroMain"
-        android:onClick="@{fragmentoMenu::btCadastroMenu}"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
         android:layout_marginTop="20dp"
+        android:onClick="@{fragmentoMenu::btCadastroMenu}"
         android:layout_marginEnd="50dp"
         android:layout_marginBottom="160dp"
         android:background="@drawable/custom_button1"

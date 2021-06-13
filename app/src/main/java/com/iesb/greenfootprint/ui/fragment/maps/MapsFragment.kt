@@ -23,8 +23,8 @@ class MapsFragment : Fragment() , OnMapReadyCallback {
 
     private lateinit var mapsbinding: FragmentMapsBinding
     private lateinit var map: GoogleMap
-    private lateinit var fusedLocationClient: FusedLocationProviderClient
 
+    //private lateinit var fusedLocationClient: FusedLocationProviderClient
     //private lateinit var locationManager: LocationManager
     //private val listaPontos = mutableListOf<LatLng>()
     //private val MAP_REQUEST_TICKET = 888
@@ -49,7 +49,7 @@ class MapsFragment : Fragment() , OnMapReadyCallback {
     override fun onMapReady(googleMap: GoogleMap) {
         map = googleMap
 
-        val BSBposition = LatLng(-15.7601 ,-47.9292)
+        val bsbPosition = LatLng(-15.7601 ,-47.9292)
         val CityParkPosition = LatLng(-15.793514, -47.899332)
         val CPposition = MarkerOptions().position(CityParkPosition).title("Parque da Cidade")
         map.addMarker(CPposition)
@@ -85,7 +85,7 @@ class MapsFragment : Fragment() , OnMapReadyCallback {
         map.addMarker(pegehplposition)
 
 
-        map.moveCamera(CameraUpdateFactory.newLatLngZoom(BSBposition, 10f))
+        map.moveCamera(CameraUpdateFactory.newLatLngZoom(bsbPosition, 10f))
     }
 
 /*

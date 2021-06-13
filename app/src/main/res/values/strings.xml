@@ -1,7 +1,5 @@
 <resources>
     <string name="app_name">Green Footprint</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <!-- Email / Senha -->
     <string name="email">Email</string>
@@ -19,6 +17,8 @@
     <string name="title_activity_sign_up">SignUpActivity</string>
     <string name="forgot_password_hint">Enter your email below to receive an email to change password</string>
     <string name="receive_password_email_button">Change password</string>
+    <string name="onboarding_start">Click here to start</string>
+
 
     <!-- Menu Interno -->
     <string name="novo_cadastro">Novo Status</string>
@@ -28,8 +28,12 @@
     -->
     <string name="hello_world">Hello Square World!</string>
     <string name="title_activity_login">LoginActivity</string>
-    <string name="localizacao_maps">Locais onde Plantar</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Maps | chatbot -->
     <string name="Pontos_plantio">Pontos para Plantio</string>
+    <string name="localizacao_maps">Maps</string>
     <string name="chatBot">ChatBot</string>
 
 

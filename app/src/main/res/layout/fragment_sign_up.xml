@@ -5,11 +5,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
         <variable
-            name="fragment"
+            name="signUpFragment"
             type="com.iesb.greenfootprint.ui.fragment.auth.SignUpFragment" />
-
     </data>
 
 
@@ -21,16 +19,18 @@
 
         <Button
             android:id="@+id/btSingUp"
-            android:onClick="@{fragment::cadastroLogin}"
+            style="?primaryButtonStyle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:layout_marginEnd="32dp"
-            android:layout_marginBottom="32dp"
+            android:onClick="@{signUpFragment::createAccountAndGotoLogin}"
             android:text="@string/signUp"
             app:layout_constraintBottom_toTopOf="@+id/tvGotoLogin"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/twConfirmPassword" />
 
         <EditText
             android:id="@+id/twEmail"
@@ -44,6 +44,7 @@
             android:textAlignment="center"
             app:layout_constraintBottom_toTopOf="@+id/twPassword"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/iw_logo" />
 
@@ -59,6 +60,7 @@
             android:textAlignment="center"
             app:layout_constraintBottom_toTopOf="@+id/twConfirmPassword"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/twEmail" />
 
@@ -74,6 +76,7 @@
             android:textAlignment="center"
             app:layout_constraintBottom_toTopOf="@+id/btSingUp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/twPassword" />
 
@@ -93,6 +96,7 @@
             android:layout_width="wrap_content"
             android:layout_height="32dp"
             android:layout_marginBottom="32dp"
+            android:onClick="@{signUpFragment::gotoLogin}"
             android:text="@string/gotoLogin"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

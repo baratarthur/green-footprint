@@ -15,16 +15,19 @@ import javax.inject.Inject
 
 class SignUpFragment : Fragment() {
 
-    private lateinit var binding : FragmentSignUpBinding
+    private lateinit var SignUpbinding : FragmentSignUpBinding
     @Inject lateinit var auth : FirebaseAuth
 
     @Suppress("UNUSED_PARAMETER")
-    fun cadastroLogin(view : View){
-
-        cadastramento()
+    fun gotoLogin(view : View) {
         findNavController().navigate(R.id.action_signUpFragment_to_loginFragment )
     }
 
+    @Suppress("UNUSED_PARAMETER")
+    fun createAccountAndGotoLogin(view : View) {
+        createAccount()
+        findNavController().navigate(R.id.action_signUpFragment_to_loginFragment )
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -32,18 +35,17 @@ class SignUpFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
 
-        binding = FragmentSignUpBinding.inflate(inflater , container , false)
-        binding.lifecycleOwner = this
-        binding.btSingUp.setOnClickListener{
+        SignUpbinding = FragmentSignUpBinding.inflate(inflater , container , false)
+        SignUpbinding.lifecycleOwner = this
+        SignUpbinding.signUpFragment = this
 
-        }
-        return binding.root
+        return SignUpbinding.root
     }
 
-    private fun cadastramento(){
-        val email = binding.twEmail.text.toString()
-        val senha = binding.twPassword.text.toString()
-        val confirmSenha = binding.twConfirmPassword.text.toString()
+    private fun createAccount(){
+        val email = SignUpbinding.twEmail.text.toString()
+        val senha = SignUpbinding.twPassword.text.toString()
+        val confirmSenha = SignUpbinding.twConfirmPassword.text.toString()
         val signUpInteractor = SignUpInteractor()
 
         try {

@@ -12,15 +12,15 @@ import com.iesb.greenfootprint.databinding.FragmentMenuInicialBinding
 
 class MenuInicialFragment : Fragment() {
 
-     private lateinit var inicialBinding: FragmentMenuInicialBinding
-
-     @Suppress("UNUSED_PARAMETER")
-     fun nav_maps(v : View){
-         findNavController().navigate(R.id.action_menuInicialFragment_to_mapsFragment)
-     }
+    private lateinit var inicialBinding: FragmentMenuInicialBinding
 
     @Suppress("UNUSED_PARAMETER")
-    fun nav_chatbot(v : View){
+    fun navMaps(v : View){
+        findNavController().navigate(R.id.action_menuInicialFragment_to_mapsFragment)
+    }
+
+    @Suppress("UNUSED_PARAMETER")
+    fun navChatbot(v : View){
 
     }
 
