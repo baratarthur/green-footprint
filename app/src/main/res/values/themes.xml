@@ -18,5 +18,8 @@
         <!-- Customize your theme here. -->
         <item name="primaryButtonStyle">@style/Widget.MaterialComponents.Button.OutlinedButton.PrimaryButton</item>
 
+        <item name="onboardingTitleStyle">@style/Widget.OnboardTitle</item>
+        <item name="onboardingSubtitleStyle">@style/Widget.OnboardSubTitle</item>
+
     </style>
 </resources>

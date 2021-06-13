@@ -3,6 +3,6 @@
     <attr format="reference" name="primaryButtonStyle"/>
     <attr format="reference" name="secondaryButtonStyle"/>
 
-    <attr format="reference" name="titleStyle"/>
-    <attr format="reference" name="subtitleStyle"/>
+    <attr format="reference" name="onboardingTitleStyle"/>
+    <attr format="reference" name="onboardingSubtitleStyle"/>
 </resources>

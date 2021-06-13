@@ -39,7 +39,8 @@
     <fragment
         android:id="@+id/onboardingFragment"
         android:name="com.iesb.greenfootprint.ui.fragment.onboarding.OnboardingFragment"
-        android:label="OnboardingFragment" >
+        android:label="OnboardingFragment"
+        tools:layout="@layout/fragment_onboarding">
         <action
             android:id="@+id/action_onboardingFragment_to_signUpFragment"
             app:destination="@id/signUpFragment" />

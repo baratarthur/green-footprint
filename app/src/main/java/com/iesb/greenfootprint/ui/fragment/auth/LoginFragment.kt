@@ -1,58 +1,66 @@
 package com.iesb.greenfootprint.ui.fragment.auth
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.iesb.greenfootprint.R
 import com.iesb.greenfootprint.databinding.FragmentLoginBinding
-import com.iesb.greenfootprint.interector.SigninInteractor
+import com.iesb.greenfootprint.domain.LoginForm
+import com.iesb.greenfootprint.domain.LoginResult
+import com.iesb.greenfootprint.viewmodel.SignInViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class LoginFragment : Fragment() {
 
-    private lateinit var Loginbinding: FragmentLoginBinding
-
-    @Suppress("UNUSED_PARAMETER")
-    fun loginButton(v : View) {
-        login()
-        findNavController().navigate(R.id.action_loginFragment_to_nav_app)
-    }
-    @Suppress("UNUSED_PARAMETER")
-    fun Forgot(v: View){
-        findNavController().navigate(R.id.action_loginFragment_to_forgotFragment)
-    }
+    private lateinit var binding: FragmentLoginBinding
+    private val viewModel: SignInViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        Loginbinding = FragmentLoginBinding.inflate(inflater , container , false)
-        Loginbinding.fragmento = this
-        Loginbinding.lifecycleOwner = this
+        binding = FragmentLoginBinding.inflate(inflater , container , false)
+        binding.fragment = this
+        binding.lifecycleOwner = this
 
-        return Loginbinding.root
+        return binding.root
     }
 
-    private fun login(){
-        val email = Loginbinding.twEmailLogin.text.toString()
-        val senha = Loginbinding.twPasswordLogin.text.toString()
-        val signinInteractor = SigninInteractor()
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
-        try {
-            signinInteractor.signinWithUser(email, senha)
-            Log.d("auth", "user logged with success")
-            //val ChamadaMenu = Intent(this, MenuAppActivity::class.java)
-            //startActivity(ChamadaMenu)
-
-        } catch (err: Error) {
-            Log.d("ERROR", err.message.toString())
-            //Toast.makeText(this, "Email ou Senha errados", Toast.LENGTH_LONG).show()
+        viewModel.result.observe(viewLifecycleOwner) {
+            when (it) {
+                is LoginResult.Success -> {
+                    findNavController().navigate(R.id.action_loginFragment_to_nav_app)
+                }
+                is LoginResult.Fail -> {
+                    Toast.makeText(context, it.msg, Toast.LENGTH_LONG).show()
+                }
+            }
         }
+    }
+
+    @Suppress("UNUSED_PARAMETER")
+    fun forgot(v: View){
+        findNavController().navigate(R.id.action_loginFragment_to_forgotFragment)
+    }
+
+    @Suppress("UNUSED_PARAMETER")
+    fun login(view: View) {
+        val form = LoginForm(
+            binding.twEmailLogin.text.toString(),
+            binding.twPasswordLogin.text.toString()
+        )
+
+        viewModel.login(form)
     }
 
 }
