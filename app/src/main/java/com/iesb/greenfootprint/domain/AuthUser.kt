@@ -7,7 +7,7 @@ import com.iesb.greenfootprint.ui.activity.MainActivity
 open class AuthUser(var email: String, var password: String) {
 
     val auth: FirebaseAuth = FirebaseAuth.getInstance()
-
+    
     fun requestPassword() {
         if(email == ""){
             throw Error("Email are empty")
