@@ -3,28 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_app"
-    app:startDestination="@id/menuInicialFragment">
+    app:startDestination="@id/firstScreenFragment">
 
     <fragment
-        android:id="@+id/menuInicialFragment"
-        android:name="com.iesb.greenfootprint.ui.fragment.inicio.MenuInicialFragment"
-        android:label="MenuInicialFragment"
-        tools:layout="@layout/fragment_menu_inicial">
-        <action
-            android:id="@+id/action_menuInicialFragment_to_statusPlantioFragment"
-            app:destination="@id/statusPlantioFragment" />
-        <action
-            android:id="@+id/action_menuInicialFragment_to_mapsFragment"
-            app:destination="@id/mapsFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/statusPlantioFragment"
-        android:name="com.iesb.greenfootprint.ui.fragment.inicio.StatusPlantioFragment"
-        android:label="StatusPlantioFragment"
-        tools:layout="@layout/fragment_status_plantio"/>
-    <fragment
-        android:id="@+id/mapsFragment"
-        android:name="com.iesb.greenfootprint.ui.fragment.maps.MapsFragment"
-        android:label="MapsFragment"
-        tools:layout="@layout/fragment_maps"/>
+        android:id="@+id/firstScreenFragment"
+        android:name="com.iesb.greenfootprint.ui.fragment.inicio.firstScreenFragment"
+        android:label="firstScreenFragment"
+        tools:layout="@layout/fragment_first_screen"/>
 </navigation>

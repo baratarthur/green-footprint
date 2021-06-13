@@ -16,7 +16,7 @@ class MenuInicialFragment : Fragment() {
 
     @Suppress("UNUSED_PARAMETER")
     fun navMaps(v : View){
-        findNavController().navigate(R.id.action_menuInicialFragment_to_mapsFragment)
+      //  findNavController().navigate(R.id.action_menuInicialFragment_to_mapsFragment)
     }
 
     @Suppress("UNUSED_PARAMETER")

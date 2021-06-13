@@ -32,9 +32,12 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <!-- Maps | chatbot -->
-    <string name="Pontos_plantio">Pontos para Plantio</string>
+    <string name="Pontos_plantio">Começe a plantar Hoje</string>
     <string name="localizacao_maps">Maps</string>
     <string name="chatBot">ChatBot</string>
 
-
+    <!-- alguns buttons -->
+    <string name="duvida">Dúvidas</string>
+    <string name="addPlanta">Adicionar Planta</string>
+    <string name="topPlantas">Top plantas</string>
 </resources>
